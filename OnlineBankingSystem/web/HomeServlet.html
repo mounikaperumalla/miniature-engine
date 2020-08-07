@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ONLINE BANKING</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+function ctck()
+{
+var sds = document.getElementById("dum");
+}
+</script>
+<SCRIPT type="text/javasccript">
+function dil(form)
+{
+  for(var i=0; i<3; i++)
+   {
+        if(!isNaN(form.elements[i].value))
+		{
+		   alert("This Field must be Char's");
+		   form.elements[i].value="";	
+		   form.elements[i].focus();
+		   return false;
+		}
+   } 
+    if(document.F1.password.value!=document.F1.REPASSWORD.value)
+    {
+	   alert("Check Confirm PWD"); 
+	   document.F1.REPASSWORD.value="";
+	   document.F1.REPASSWORD.focus();	
+	   return false;
+	}
+	
+	
+	if(!isNaN(document.F1.PHONENUMBER.value))
+   {
+	   if(document.F1.PHONENUMBER.value >9999999999 );
+	   {
+		 alert("ye kabhi nhi aayegi");
+		 document.F1.PHONENUMBER.value="";
+		 document.F1.PHONENUMBER.focus();
+         return false ;  
+	   }
+   }
+   else
+   {
+       alert("This  field  must  be  number");
+	   document.F1.PHONENUMBER.value="";
+	   return false;
+       }
+   if(!isNaN(document.F1.AMOUNT.value))
+   {
+	   if(document.F1.AMOUNT.value < 500)
+	   {
+		 alert("Minimum Balance should be 500 /-");
+		 document.F1.AMOUNT.value="";
+		 document.F1.AMOUNT.focus();
+         return false ;  
+	   }
+   }
+   else
+   {
+       alert("This  field  must  be  number");
+	   document.F1.AMOUNT.value="";
+	   return false;
+   }
+   
+   
+
+   for(var i=0; i<form.elements.length; i++)
+   {
+		if(form.elements[i].value === "")
+		{
+		   alert("Fill out all Fields");
+		   document.F1.USERNAME.focus();
+		   return false;
+		}
+   }
+
+   
+
+   return true; 
+</script>
+ </head>
+    <body>
+       
+        <div id="TOPLINKS">
+            
+            <div id="header">
+            <h1>T- BANK<span class="style1"></span></h1>
+            <h2>ONE TAP-MONEY TRANSFER</h2>
+             <img src="banking.jpg" alt="Banking">
+            <A href="index.html"></A>
+             </div>
+               <div id="navigation">
+                   <ul>
+                       <li><a href="Home.html">CREATE</a></li>
+                       <li><a href="accountbal.jsp">BALANCE</a></li>
+                       <li><a href="transaction.jsp">TRANSACTION</a></li>
+                       <li><a href="deposit.jsp">DEPOSIT</a></li>
+                       <li><a href="withdraw.jsp">WITHDRAW</a></li>
+                       <li><a href="Fundtransfer.jsp">TRANSFERFUNDS</a></li>
+                    </ul>  
+               </div>
+            <div id="welcome" style="border-right:#666666 1px dotted;"></div>
+            <h1>CREATE YOUR ACCOUNT</h1><br>
+        
+            <table  align="center" bgcolor="white">
+                <tr>
+                    <td>
+                         <form name=F1 onSubmit="return dil(this)" action="HomeServlet1" >
+				   <table cellspacing="5" cellpadding="3">	
+				  <tr><td>USERNAME:</td><td> <input type="text" name="USERNAME"/></td></tr>
+					<tr><td>PASSWORD:</td><td> <input type="text" name="PASSWORD"/></td></tr>
+					<tr><td>RE-PASSWORD:</td><td> <input type="password" name="RPASSWORD"/></td></tr>
+					<tr><td>AMOUNT:</td><td><input type="text" name="AMOUNT"/></td></tr>
+                                        <tr><td>ADDRESS:</td><td> <input type="text" name="ADDRESS"/></td></tr>
+                                        <tr><td>PHONE:</td><td> <input type="text" name="PHONENUMBER"/></td></tr>
+					<tr><td></td><td><input type="submit" value="Submit"/>
+					
+                   
+                   <INPUT TYPE=RESET VALUE="CLEAR"></td></tr>
+             	</table>
+				</form>
+			</td>
+		</tr>
+	</table>
+    	     
+<script type="text/javascript">
+document.onload = ctck();
+</script>
+   </div>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>HomeServlet1</servlet-name>
+        <servlet-class>org.mypackage.bankingapp.HomeServlet1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet1</servlet-name>
+        <url-pattern>/HomeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>userRegister</servlet-name>
+        <servlet-class>org.mypackage.bankingapp.userRegister</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>loginVerifcation</servlet-name>
+        <servlet-class>banking.loginVerifcation</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>DBintlz</servlet-name>
+        <servlet-class>org.mypackage.bankingapp.DBintlz</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>BankFunctions</servlet-name>
+        <servlet-class>org.mypackage.bankingapp.BankFunctions</servlet-class>
+    </servlet>
+    <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>GetCon</servlet-name>
+        <servlet-class>org.mypackage.bankingapp.GetCon</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>userRegister</servlet-name>
+        <url-pattern>/userRegister</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>loginVerifcation</servlet-name>
+        <url-pattern>/loginVerifcation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DBintlz</servlet-name>
+        <url-pattern>/DBintlz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BankFunctions</servlet-name>
+        <url-pattern>/BankFunctions</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetCon</servlet-name>
+        <url-pattern>/GetCon</url-pattern>
+    </servlet-mapping>
+    <listener>
+        <listener-class>org.mypackage.bankingapp.ServletListener</listener-class>
+    </listener>
+</web-app>
